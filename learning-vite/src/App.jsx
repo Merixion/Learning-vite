@@ -1,9 +1,16 @@
+import { useState } from "react";
 
 function App() {
+  const [text, setText] = useState('Привет, Мир!');
+
+  const SayHello = () =>{
+    setText("Привет, Максим");
+  }
 
   return (
     <div>
-    <h1>ggg</h1>
+    <h1>{text}</h1>
+    <button onClick={SayHello}></button>
     </div>
   );
 }
